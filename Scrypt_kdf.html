@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Salsa20_core.html">
+<link rel="Up" href="index.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Salsa20_core" rel="Chapter" href="Salsa20_core.html">
+<link title="Scrypt_kdf" rel="Chapter" href="Scrypt_kdf.html"><title>Scrypt_kdf</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Salsa20_core.html" title="Salsa20_core">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Scrypt_kdf.html">Scrypt_kdf</a></h1>
+
+<pre><span class="keyword">module</span> Scrypt_kdf: <code class="code"><span class="keyword">sig</span></code> <a href="Scrypt_kdf.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+<a href="https://tools.ietf.org/html/draft-josefsson-scrypt-kdf-04.txt">
+    The scrypt Password-Based Key Derivation Function Internet Draft</a>
+    specifies the password-based key derivation function scrypt. The
+    function derives one or more secret keys from a secret string.
+    It is based on memory-hard functions which offer added protection
+    against attacks using custom hardware.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALscrypt_kdf"><span class="keyword">val</span> scrypt_kdf</span> : <code class="type">password:Cstruct.t -><br>       salt:Cstruct.t -> n:int -> r:int -> p:int -> dk_len:int32 -> Cstruct.t</code></pre><div class="info ">
+<code class="code">scrypt_kdf password salt n r p dk_len</code> is <code class="code">dk</code>, the derived key
+    of <code class="code">dk_len</code> octets.
+    <code class="code">n</code>, the cost parameter, must be larger than 1 and a power of 2.
+    <code class="code">p</code>, the parallelization parameter, must be a possitive integer
+    and less than or equal to 2^32 - 1 / (4 * r)<br>
+<b>Raises</b> <code>Invalid_argument</code> when either <code class="code">n</code>, <code class="code">p</code> or <code class="code">dk_len</code> are not
+    valid<br>
+</div>
+</body></html>

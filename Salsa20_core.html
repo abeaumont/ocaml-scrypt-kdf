@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Scrypt_kdf.html">
+<link rel="Up" href="index.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Salsa20_core" rel="Chapter" href="Salsa20_core.html">
+<link title="Scrypt_kdf" rel="Chapter" href="Scrypt_kdf.html"><title>Salsa20_core</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Scrypt_kdf.html" title="Scrypt_kdf">Next</a>
+</div>
+<h1>Module <a href="type_Salsa20_core.html">Salsa20_core</a></h1>
+
+<pre><span class="keyword">module</span> Salsa20_core: <code class="code"><span class="keyword">sig</span></code> <a href="Salsa20_core.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+<a href="http://cr.yp.to/snuffle/spec.pdf"> The Salsa20 specification</a>
+    specifies a Salsa20/20 Core function as well as a set of reduced
+    Salsa20/8 Core and Salsa20/12 Core functions<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALsalsa20_8_core"><span class="keyword">val</span> salsa20_8_core</span> : <code class="type">Cstruct.t -> Cstruct.t</code></pre><div class="info ">
+<code class="code">salsa20_8_core input</code> is <code class="code">output</code>, the Salsa20/8 Core function.
+    <code class="code">input</code> must be 16 blocks of 32 bits.<br>
+<b>Raises</b> <code>Invalid_argument</code> if <code class="code">input</code> is not of the correct size<br>
+</div>
+
+<pre><span id="VALsalsa20_12_core"><span class="keyword">val</span> salsa20_12_core</span> : <code class="type">Cstruct.t -> Cstruct.t</code></pre><div class="info ">
+<code class="code">salsa20_12_core input</code> is <code class="code">output</code>, the Salsa20/12 Core function.
+    <code class="code">input</code> must be 16 blocks of 32 bits.<br>
+<b>Raises</b> <code>Invalid_argument</code> if <code class="code">input</code> is not of the correct size<br>
+</div>
+
+<pre><span id="VALsalsa20_20_core"><span class="keyword">val</span> salsa20_20_core</span> : <code class="type">Cstruct.t -> Cstruct.t</code></pre><div class="info ">
+<code class="code">salsa20_20_core input</code> is <code class="code">output</code>, the Salsa20/20 Core function.
+    <code class="code">input</code> must be 16 blocks of 32 bits.<br>
+<b>Raises</b> <code>Invalid_argument</code> if <code class="code">input</code> is not of the correct size<br>
+</div>
+</body></html>

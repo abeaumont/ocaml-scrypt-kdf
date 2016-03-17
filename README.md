@@ -1,1 +1,0 @@
-A pure OCaml implementation of [scrypt](https://en.wikipedia.org/wiki/Scrypt) password based key derivation function, as defined in [this internet draft](https://tools.ietf.org/html/draft-josefsson-scrypt-kdf-04)
